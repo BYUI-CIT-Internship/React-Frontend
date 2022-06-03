@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./create-vm/header";
+import Body from "./create-vm/body";
+import Squares from "./floatings-squares/squares";
+import Import from "./create-vm/import"
+import "./App.css";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div>
+     <Import />
+     
+      <div className="container">
+        <Header />
+        <h4 className="lets">Let's create a VM</h4>
+        <Body />
+      </div>
+      <Squares />
+      <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer />
     </div>
+    
   );
 }
 
